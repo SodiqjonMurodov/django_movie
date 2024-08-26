@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <!-- //Meta tag Keywords -->
+    <title>Django Movies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <!--/ Style-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <!--// Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+          rel="stylesheet">
+    <!-- //Fonts -->
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- //Favicon -->
+</head>
+<body>
+<div id="page" class="page">
+    <div class="main-banner bg {% block header %}{% endblock header %}" id="home">
+        {% include "include/header.html" %}
+    </div>
+
+    {% block breadcrumb %}
+    {% endblock breadcrumb %}
+
+    {% block base_content %}
+    {% endblock base_content %}
+
+    {% include "include/footer.html" %}
+</div>
+<script src="{% static 'js/slider.js' %}"></script>
+</body>
+</html>
